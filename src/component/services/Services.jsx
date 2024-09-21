@@ -3,12 +3,13 @@ import { MdArrowOutward } from "react-icons/md";
 const Services = () => {
   return (
     <section className="bg-black text-white py-16 px-8">
-      <div className="max-w-8xl rounded-lg mx-auto bg-[#151515] ml-10">
+      <div className="max-w-8xl rounded-lg mx-auto bg-[#151515] ">
         {/* Header */}
-        <div className="mb-12 flex flex-wrap pt-10 ml-10 space-x-28 ">
+        <div className="mb-12 flex md:flex-wrap flex-col pt-10 ml-10 md:space-x-28 ">
           <h2 className="text-lg font-light tracking-wide mb-4">
             • Our Services
           </h2>
+
           <p className="text-2xl font-semibold leading-relaxed max-w-2xl">
             We are a close-knit team of experts <br /> dedicated to crafting
             memorable and <br /> emotionally engaging websites, digital <br />
