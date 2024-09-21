@@ -16,9 +16,9 @@ const MobileHome = () => {
       {/* Navbar */}
       <nav className="flex justify-between items-center px-8 py-4 z-10 relative">
         <div className="text-3xl font-bold">Wefo</div>
-
-        <span className="bg-[#4034EB] text-white px-3 py-2 rounded-full hover:bg-indigo-600 flex items-center">
-          <p>Start a project</p> <MdArrowOutward className="ml-2" />
+        <span className="bg-[#4034EB] text-white px-6 py-2 rounded-full hover:bg-indigo-600 flex items-center space-x-2">
+          <p>Start a project</p>
+          <MdArrowOutward className="text-lg" />
         </span>
 
         <button onClick={onToggleMenu} className="text-3xl">
@@ -41,15 +41,15 @@ const MobileHome = () => {
           studio passionate about creating highly applicable digital
           experiences.
         </p>
-        <span className="mt-8 bg-transparent border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition flex justify-between">
+        <span className="mt-8 bg-transparent border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition flex items-center space-x-2">
           <p>Explore</p>
-          <MdArrowOutward className="ml-2" />
+          <MdArrowOutward className="text-lg" />
         </span>
       </section>
 
       {/* SVG Background */}
       <div className="absolute top-0 left-0 w-full h-full">
-      <svg
+        <svg
           width="100%"
           height="100%"
           viewBox="0 0 1888 1862"

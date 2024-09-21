@@ -7,7 +7,7 @@ const DesktopHome = () => {
       {/* Navbar */}
       <nav className="flex justify-around items-center px-8 py-4 z-10 relative">
         <div className="text-3xl font-bold">Wefo</div>
-        <div className="space-x-4 bg-transparent border-2 border-[#848487] px-5 py-3 rounded-full space-x-10">
+        <div className=" bg-transparent border-2 border-[#848487] px-5 py-3 rounded-full space-x-10">
           <a href="#" className="hover:underline">
             Menu item
           </a>
@@ -18,8 +18,10 @@ const DesktopHome = () => {
             Menu item
           </a>
         </div>
-        <span className="bg-[#4034EB] text-white px-6 py-2 rounded-full hover:bg-indigo-600 flex justify-between">
-          <p>Start a project</p> <MdArrowOutward className="mr-2" />
+
+        <span className="bg-[#4034EB] text-white px-6 py-2 rounded-full hover:bg-indigo-600 flex items-center space-x-2">
+          <p>Start a project</p>
+          <MdArrowOutward className="text-lg" />
         </span>
       </nav>
 
@@ -35,9 +37,9 @@ const DesktopHome = () => {
           studio passionate about creating highly applicable digital
           experiences.
         </p>
-        <span className="mt-8 bg-transparent border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition flex justify-between">
+        <span className="mt-8 bg-transparent border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition flex items-center space-x-2">
           <p>Explore</p>
-          <MdArrowOutward className="mr-2" />
+          <MdArrowOutward className="text-lg" />
         </span>
       </section>
 
@@ -130,7 +132,10 @@ const DesktopHome = () => {
               />
             </g>
           </g>
-          <g style={{ mixBlendMode: "screen" }} filter="url(#filter0_ddf_2801_102)">
+          <g
+            style={{ mixBlendMode: "screen" }}
+            filter="url(#filter0_ddf_2801_102)"
+          >
             <rect
               x="562.084"
               y="502.745"
@@ -185,7 +190,11 @@ const DesktopHome = () => {
                 type="matrix"
                 values="0 0 0 0 0.25098 0 0 0 0 0.203922 0 0 0 0 0.921569 0 0 0 1 0"
               />
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2801_102" />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_2801_102"
+              />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -199,8 +208,17 @@ const DesktopHome = () => {
                 type="matrix"
                 values="0 0 0 0 0.917647 0 0 0 0 0.203922 0 0 0 0 0.92549 0 0 0 1 0"
               />
-              <feBlend mode="normal" in2="effect1_dropShadow_2801_102" result="effect2_dropShadow_2801_102" />
-              <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_2801_102" result="shape" />
+              <feBlend
+                mode="normal"
+                in2="effect1_dropShadow_2801_102"
+                result="effect2_dropShadow_2801_102"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect2_dropShadow_2801_102"
+                result="shape"
+              />
             </filter>
             <filter
               id="filter1_f_2801_102"
@@ -212,8 +230,16 @@ const DesktopHome = () => {
               colorInterpolationFilters="sRGB"
             >
               <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-              <feGaussianBlur stdDeviation="143.8" result="effect1_foregroundBlur_2801_102" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"
+              />
+              <feGaussianBlur
+                stdDeviation="143.8"
+                result="effect1_foregroundBlur_2801_102"
+              />
             </filter>
             <radialGradient
               id="paint0_radial_2801_102"

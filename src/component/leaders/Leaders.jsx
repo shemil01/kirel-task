@@ -31,7 +31,7 @@ const variants = {
 const Leaders = () => {
   const ref = useRef();
   return (
-    <section className="bg-black text-white py-20 overflow-hidden">
+    <section className="bg-black text-white py-20 overflow-hidden ">
       {/* give animation this div */}
       <motion.div
         ref={ref}
@@ -39,7 +39,7 @@ const Leaders = () => {
         initial="initial"
         whileInView="animate"
         exit="exit"
-        className="container mx-auto md:mx-32 px-4"
+        className="container pl-10 md:mx-32 px-4"
       >
         <div className="text-left">
           <p className="text-sm text-gray-400">• Our leader</p>

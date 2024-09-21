@@ -2,7 +2,7 @@ import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 
 const Testimoni = () => {
   return (
-    <section className="bg-gradient-to-r from-blue-600 via-black to-black">
+    <section className="bg-gradient-to-r from-blue-600 via-black to-black overflow-hidden">
       <div className="mx-10 pt-5 md:flex space-x-5 space-y-5 md:space-x-40">
         <div>
           <h1 className="text-white">• Testimonials</h1>

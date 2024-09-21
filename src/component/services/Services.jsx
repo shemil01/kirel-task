@@ -1,11 +1,37 @@
 import { MdArrowOutward } from "react-icons/md";
+import { animate, motion } from "framer-motion";
+import { useRef } from "react";
+
+//animation
+const variants = {
+  initial: {
+    x: -100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 const Services = () => {
+  const ref = useRef();
   return (
-    <section className="bg-black text-white py-16 px-8">
+    <section className="bg-black text-white py-16 px-8 overflow-hidden">
       <div className="max-w-8xl rounded-lg mx-auto bg-[#151515] ">
         {/* Header */}
-        <div className="mb-12 flex md:flex-wrap flex-col pt-10 ml-10 md:space-x-28 ">
+        <motion.div
+          ref={ref}
+          variants={variants}
+          initial="initial"
+          whileInView="animate"
+          className="mb-12 flex md:flex-wrap flex-col pt-10 ml-10 md:space-x-28 "
+        >
           <h2 className="text-lg font-light tracking-wide mb-4">
             • Our Services
           </h2>
@@ -15,12 +41,18 @@ const Services = () => {
             memorable and <br /> emotionally engaging websites, digital <br />
             experiences, and native apps.
           </p>
-        </div>
+        </motion.div>
 
         {/* Services Grid */}
         <div className="grid gap-8 md:grid-cols-3">
           {/* Service Card 1 */}
-          <div className="hover:bg-[#4034EB] rounded-xl p-6 relative group mx-5 my-5">
+          <motion.div
+            ref={ref}
+            variants={variants}
+            initial="initial"
+            whileInView="animate"
+            className="hover:bg-[#4034EB] rounded-xl p-6 relative group mx-5 my-5"
+          >
             <div className="absolute top-4 right-4 bg-transparent border border-white rounded-full p-2 transition-all ">
               <MdArrowOutward />
             </div>
@@ -30,10 +62,16 @@ const Services = () => {
               App Design, Landing <br /> Page design, Illustration, Animation,
               etc. <br /> that increase company values.
             </p>
-          </div>
+          </motion.div>
 
           {/* Service Card 2 */}
-          <div className="hover:bg-[#4034EB] rounded-xl p-6 relative group mx-5 my-5">
+          <motion.div
+            ref={ref}
+            variants={variants}
+            initial="initial"
+            whileInView="animate"
+            className="hover:bg-[#4034EB] rounded-xl p-6 relative group mx-5 my-5"
+          >
             <div className="absolute top-4 right-4 bg-transparent border border-white rounded-full p-2 transition-all ">
               <MdArrowOutward />
             </div>
@@ -43,10 +81,16 @@ const Services = () => {
               App Design, Landing <br /> Page design, Illustration, Animation,
               etc. <br /> that increase company values.
             </p>
-          </div>
+          </motion.div>
 
           {/* Service Card 3 */}
-          <div className="hover:bg-[#4034EB] rounded-xl p-6 relative group mx-5 my-5">
+          <motion.div
+            ref={ref}
+            variants={variants}
+            initial="initial"
+            whileInView="animate"
+            className="hover:bg-[#4034EB] rounded-xl p-6 relative group mx-5 my-5"
+          >
             <div className="absolute top-4 right-4 bg-transparent border border-white rounded-full p-2 transition-all ">
               <MdArrowOutward />
             </div>
@@ -56,7 +100,7 @@ const Services = () => {
               App Design, Landing <br /> Page design, Illustration, Animation,
               etc. <br /> that increase company values.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
