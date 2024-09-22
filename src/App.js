@@ -6,6 +6,8 @@ import Leaders from './component/leaders/Leaders';
 import Services from './component/services/Services';
 import Testimoni from './component/testimoni/Testimoni';
 import Works from './component/works/Works';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
   <Leaders />
   <Testimoni/>
   <Contact/>
+
+  {/* toast library */}
+  <ToastContainer />
 </div>
   );
 }

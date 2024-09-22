@@ -44,7 +44,9 @@ const Leaders = () => {
         <div className="text-left">
           <p className="text-sm text-gray-400">• Our leader</p>
         </div>
-        <div className="text-left md:ml-36">
+
+        {/* laptop-l is customized size */}
+        <div className="text-left laptop-l:ml-36">
           <p>
             Each product is crafted with passion and <br /> dedication. Meet our
             leader!

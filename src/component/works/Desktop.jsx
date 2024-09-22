@@ -35,13 +35,14 @@ const Desktop = () => {
       <div className="flex  flex-row mx-10 space-y-0 space-x-5 ">
         {/* first section */}
         <div className="flex flex-col  items-start">
+          {/* box 1 */}
           <motion.div
             ref={ref}
             variants={variants}
             initial="initial"
             whileInView="animate"
             exit="exit"
-            className=" w-[600px] h-[450px] bg-[#121212] rounded-lg"
+            className=" laptop-l:w-[600px] laptop-l:h-[450px] laptop:w-[400px] laptop:h-[250px] bg-[#121212] rounded-lg"
           ></motion.div>
           <div className="text-white space-y-5 mt-5">
             <div className="flex flex-wrap space-x-2">
@@ -57,14 +58,14 @@ const Desktop = () => {
             </div>
             <h1 className="text-2xl text-left">Roboto Landing page</h1>
           </div>
-
+          {/* box 2 */}
           <motion.div
             ref={ref}
             variants={variants}
             initial="initial"
             whileInView="animate"
             exit="exit"
-            className=" w-[600px] h-[450px] bg-[#121212] mt-5 rounded-lg"
+            className=" laptop-l:w-[600px] laptop-l:h-[450px] laptop:w-[400px] laptop:h-[250px] bg-[#121212] mt-5 rounded-lg"
           ></motion.div>
           <div className="text-white space-y-5 mt-5">
             <div className="flex flex-wrap space-x-2">
@@ -91,14 +92,14 @@ const Desktop = () => {
               our projects
             </p>
           </div>
-
+          {/* box 1 */}
           <motion.div
             ref={ref}
             variants={variants}
             initial="initial"
             whileInView="animate"
             exit="exit"
-            className="w-[600px] h-[450px] mt-5 bg-[#121212] rounded-lg relative"
+            className="laptop-l:w-[600px] laptop-l:h-[450px] laptop:w-[400px] laptop:h-[250px] mt-5 bg-[#121212] rounded-lg relative"
           >
             <span className="absolute right-8 top-1/2 transform -translate-y-1/2 bg-transparent border border-[#2D2D2E] text-white px-6 py-2 rounded-full hover:bg-indigo-600 flex justify-between items-center">
               <p>View project</p>
@@ -117,14 +118,14 @@ const Desktop = () => {
             </div>
             <h1 className="text-2xl text-left">Poppin App Design</h1>
           </div>
-
+          {/* box 2 */}
           <motion.div
             ref={ref}
             variants={variants}
             initial="initial"
             whileInView="animate"
             exit="exit"
-            className="w-[600px] h-[450px] bg-[#121212] mt-5 rounded-lg"
+            className="laptop-l:w-[600px] laptop-l:h-[450px] laptop:w-[400px] laptop:h-[250px] bg-[#121212] mt-5 rounded-lg"
           ></motion.div>
           <div className="text-white space-y-5 mt-5">
             <div className="flex flex-wrap space-x-2">

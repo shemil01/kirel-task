@@ -5,7 +5,9 @@ import { MdArrowOutward } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
+//animation
 const variants = {
   initial: {
     y: 100,
@@ -25,19 +27,28 @@ const variants = {
 const Contact = () => {
   const ref = useRef();
   const formRef = useRef();
+
+
+  // Function to handle email sending using EmailJS
   const sendEmail = (e) => {
+     // Prevents the default form submission behavior
     e.preventDefault();
 
+
+    // Calls the EmailJS service to send the form data
     emailjs
       .sendForm("service_tw4p6e8", "template_2x2grrc", formRef.current, {
         publicKey: "tCoR5hwF8CIL4t2pG",
       })
       .then(
+        // If the email is sent successfully, display a success toast notification
         (result) => {
-          alert("Message sending successfull");
+          toast.success("Message sending successfull");
         },
+         // If the email fails to send, display an error toast notification
+        // error.text provides the error message returned by EmailJS
         (error) => {
-          console.log("FAILED...", error.text);
+          toast.error("FAILED...", error.text);
         }
       );
   };
@@ -80,39 +91,48 @@ const Contact = () => {
 
         <div>
           <form className="w-[400px]" ref={formRef} onSubmit={sendEmail}>
+            {/* Name input */}
             <div className="flex flex-col w-full">
               <label>Name</label>
               <input
                 type="text"
+                name="user_name" // add name attribute
                 placeholder="Your name"
                 className="bg-transparent border-b-[3px] border-[#2D2D2E] focus:outline-none focus:border-blue-500 pb-2 placeholder:text-[#7C7C7C] w-full"
               />
             </div>
 
+            {/* Email input */}
             <div className="flex flex-col w-full mt-4">
               <label>Email</label>
               <input
-                type="text"
+                type="email"
+                name="user_email" // add name attribute
                 placeholder="Your email address"
                 className="bg-transparent border-b-[3px] border-[#2D2D2E] focus:outline-none focus:border-blue-500 pb-2 placeholder:text-[#7C7C7C] w-full"
               />
             </div>
 
+            {/* Message textarea */}
             <div className="flex flex-col w-full mt-4">
               <label>Message</label>
               <textarea
-                type="text"
+                name="message" // add name attribute
                 placeholder="Write your message here..."
                 className="bg-transparent w-full border-none resize-none placeholder:text-[#7C7C7C] focus:outline-none"
               />
               <hr className="w-full border-t-[3px] border-[#2D2D2E] opacity-35 mt-2" />
             </div>
-          </form>
 
-          <span className="bg-transparent border w-40 border-[#2D2D2E] text-white px-6 py-2 rounded-full hover:bg-indigo-600 flex justify-between mt-8">
-            <p>Send</p>
-            <MdArrowOutward className="mr-2" />
-          </span>
+            {/* Submit button */}
+            <button
+              type="submit"
+              className="bg-transparent border w-40 border-[#2D2D2E] text-white px-6 py-2 rounded-full hover:bg-indigo-600 flex justify-between mt-8"
+            >
+              Send
+              <MdArrowOutward className="ml-2" />
+            </button>
+          </form>
         </div>
       </motion.div>
       <footer className="text-white space-y-10 mx-10 mt-16">

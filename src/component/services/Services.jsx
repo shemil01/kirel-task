@@ -1,5 +1,5 @@
 import { MdArrowOutward } from "react-icons/md";
-import { animate, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import { useRef } from "react";
 
 //animation
