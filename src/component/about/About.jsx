@@ -1,19 +1,19 @@
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
-
+import { MdArrowOutward } from "react-icons/md";
 
 //animation
 const variants = {
   initial: {
-    y: 100, 
+    y: 100,
     opacity: 0,
   },
   animate: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.8, 
-      ease: "easeOut", 
+      duration: 0.8,
+      ease: "easeOut",
       staggerChildren: 0.2,
     },
   },
@@ -30,10 +30,8 @@ const variants = {
 const About = () => {
   const ref = useRef();
 
-
   return (
     <section className="bg-black pt-10">
-
       {/* give animation that div */}
       <motion.div
         ref={ref}
@@ -48,13 +46,15 @@ const About = () => {
           <motion.div className="w-48 h-20 bg-blue-600 rounded-full"></motion.div>
         </div>
         <div className="space-y-10">
-          <p className="text-2xl font-semibold leading-relaxed max-w-2xl text-white">
-            We are a close-knit team of experts <br /> dedicated to crafting
-            memorable and <br /> emotionally engaging websites, digital <br />
-            experiences, and native apps.
-          </p>
-          <motion.div className="w-40 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-            learn more
+        <p className="text-2xl font-semibold leading-relaxed max-w-2xl text-white">
+  We are creating mind-blowing visuals, brands, <br /> 
+  websites, and products<span className="text-[#838384]"> that help startups <br />
+  and innovative companies gain more <br /> exposure.</span> 
+</p>
+
+          <motion.div className="w-40 h-10 bg-blue-600 space-x-2 text-white rounded-full flex items-center justify-center hover:text-black hover:bg-gray-200">
+            <p>learn more</p>
+            <MdArrowOutward className="text-lg" />
           </motion.div>
         </div>
       </motion.div>

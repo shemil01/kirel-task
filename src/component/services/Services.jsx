@@ -38,8 +38,8 @@ const Services = () => {
 
           <p className="text-2xl font-semibold leading-relaxed max-w-2xl">
             We are a close-knit team of experts <br /> dedicated to crafting
-            memorable and <br /> emotionally engaging websites, digital <br />
-            experiences, and native apps.
+            memorable and <br /> <span className="text-[#838384]"> emotionally engaging websites, digital <br />
+            experiences, and native apps.</span>
           </p>
         </motion.div>
 
