@@ -15,6 +15,7 @@ Used libraries:
 * framer motion
 * email js
 * toastify
+* react icons
 
 
 Responsive:
