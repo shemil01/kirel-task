@@ -14,6 +14,7 @@ Used libraries:
 * tailwind css
 * framer motion
 * email js
+* toastify
 
 
 Responsive:
